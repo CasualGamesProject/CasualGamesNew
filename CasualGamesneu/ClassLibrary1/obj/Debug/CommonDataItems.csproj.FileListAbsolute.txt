@@ -1,0 +1,5 @@
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\ClassLibrary1\obj\Debug\CommonDataItems.csprojResolveAssemblyReference.cache
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

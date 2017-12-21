@@ -1,0 +1,35 @@
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe.config
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.pdb
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\ClassLibrary1.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\MonoGame.Framework.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XInput.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\ClassLibrary1.pdb
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\MonoGame.Framework.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XInput.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\obj\x86\Debug\MonoGameClient.csprojResolveAssemblyReference.cache
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\obj\x86\Debug\MonoGameClient.exe
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\obj\x86\Debug\MonoGameClient.pdb
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Client.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Client.xml
+c:\users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+C:\Users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Content\Player 1.xnb
+C:\Users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Content\Player 2.xnb
+C:\Users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Content\Player 3.xnb
+C:\Users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Content\Player 4.xnb
+C:\Users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Content\Message.xnb
