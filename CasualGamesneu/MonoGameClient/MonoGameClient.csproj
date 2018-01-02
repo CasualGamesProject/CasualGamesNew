@@ -43,7 +43,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="FadeTextManager.cs" />
-    <Compile Include="Game Objects\Coin.cs" />
     <Compile Include="Game Objects\InputEngine.cs" />
     <Compile Include="Game Objects\OtherPlayers.cs" />
     <Compile Include="Game Objects\SimplePlayerSprite.cs" />

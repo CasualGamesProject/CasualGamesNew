@@ -52,19 +52,18 @@ namespace Sprites
             delay -= gameTime.ElapsedGameTime;
 
             // if we have moved pull back the proxy reference and send a message to the hub
-            if (Position != previousPosition && delay.Milliseconds <= 0)
+            if(Position != previousPosition && delay.Milliseconds <= 0)
             {
-                delay = new TimeSpan(0, 0, 1);
+                delay = new TimeSpan(0,0,1);
                 pData.playerPosition = new Position { X = Position.X, Y = Position.Y };
                 IHubProxy proxy = Game.Services.GetService<IHubProxy>();
-                proxy.Invoke("Moved", new Object[]
+                proxy.Invoke("Moved", new Object[] 
                 {
                     pData.playerID,
                     pData.playerPosition});
             }
 
             BoundingRect = new Rectangle(Position.X, Position.Y, Image.Width, Image.Height);
-           
             base.Update(gameTime);
         }
 
