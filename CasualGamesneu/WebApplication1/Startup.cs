@@ -13,5 +13,11 @@ namespace WebApplication1
         {
             app.MapSignalR();
         }
+
+        public void PopulateCoins()
+        {
+
+        }
+
     }
 }
