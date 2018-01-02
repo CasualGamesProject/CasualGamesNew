@@ -55,8 +55,6 @@ namespace WebApplication1
                     Players.Add(newPlayer);
                     return newPlayer;
                 }
-
-
             }
             return null;
         }
@@ -75,5 +73,17 @@ namespace WebApplication1
                 Clients.Others.OtherMove(playerID, newPosition);
             }
         }
+
+
+        public void LeftGame(string playerID, PlayerData pdata)
+        {
+            RegisteredPlayers.Enqueue(pdata);
+            characters.Push(pdata.imageName);
+            //RegisteredPlayers.Enqueue(); Player Name
+            //characters.Push(); player ID
+            Clients.Others.Left(playerID);
+        }
+
+
     }
 }
