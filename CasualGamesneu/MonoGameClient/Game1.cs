@@ -7,6 +7,7 @@ using System;
 using Sprites;
 using GameComponentNS;
 using System.Collections.Generic;
+using Engine.Engines;
 
 namespace MonoGameClient
 {
@@ -33,6 +34,10 @@ namespace MonoGameClient
        
         protected override void Initialize()
         {
+
+            new InputEngine(this);
+
+
             serverConnection = new HubConnection("http://localhost:50983/");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
@@ -46,6 +51,9 @@ namespace MonoGameClient
 
             Action<string, Position> otherMove = clientOtherMoved;
             proxy.On<string, Position>("OtherMove", otherMove);
+
+            Services.AddService<IHubProxy>(proxy);
+
 
             base.Initialize();
         }
