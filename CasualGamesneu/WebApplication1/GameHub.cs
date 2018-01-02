@@ -18,7 +18,7 @@ namespace WebApplication1
 
         });
 
-
+        
         public static List<PlayerData> Players = new List<PlayerData>();
 
         public static Stack<string> characters = new Stack<string>(new string[] {"Player 4", "Player 3", "Player 2", "Player 1" });

@@ -13,6 +13,7 @@ namespace Sprites
 {
     public class SimplePlayerSprite :DrawableGameComponent
     {
+        public List<Coin> CoinsCollected = new List<Coin>();
         public Texture2D Image;
         public Point Position;
         public Rectangle BoundingRect;
