@@ -142,6 +142,12 @@ namespace MonoGameClient
                         });
         }
 
+        private void LeaveGame()
+        {
+
+            proxy.Invoke<PlayerData>("LeftGame");
+        }
+
         private void CreatePlayer(PlayerData player)
         {
             new SimplePlayerSprite(this, player, Content.Load<Texture2D>(player.imageName),

@@ -75,13 +75,14 @@ namespace WebApplication1
         }
 
 
-        public void LeftGame(string playerID, PlayerData pdata)
+        public void LeftGame(PlayerData pdata)
         {
             RegisteredPlayers.Enqueue(pdata);
             characters.Push(pdata.imageName);
             //RegisteredPlayers.Enqueue(); Player Name
             //characters.Push(); player ID
-            Clients.Others.Left(playerID);
+            Clients.Others.Left(pdata);
+            Players.Remove(pdata); // remove from players on server
         }
 
 
