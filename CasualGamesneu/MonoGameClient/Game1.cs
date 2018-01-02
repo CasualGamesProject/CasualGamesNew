@@ -37,7 +37,10 @@ namespace MonoGameClient
 
             new InputEngine(this);
 
+            //Our Azure server can be swapped with local host (http://s00162322gameserver.azurewebsites.net)
 
+
+            //hosting locally 
             serverConnection = new HubConnection("http://localhost:50983/");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
@@ -99,10 +102,7 @@ namespace MonoGameClient
         }
 
 
-        /// <summary>
-        /// ////////////
-        /// </summary>
-
+      
 
         private void ServerConnection_StateChanged(StateChange State)
         {
