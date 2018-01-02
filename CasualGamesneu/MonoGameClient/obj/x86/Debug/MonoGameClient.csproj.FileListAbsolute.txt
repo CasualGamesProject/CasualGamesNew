@@ -33,3 +33,38 @@ C:\Users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin
 C:\Users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Content\Player 3.xnb
 C:\Users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Content\Player 4.xnb
 C:\Users\noel\documents\visual studio 2015\Projects\Solution1\MonoGameClient\bin\Windows\x86\Debug\Content\Message.xnb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe.config
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.exe
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.pdb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\Message.xnb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\Player 1.xnb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\Player 2.xnb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\Player 3.xnb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\Player 4.xnb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.pdb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\ClassLibrary1.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\ClassLibrary1.pdb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.csprojResolveAssemblyReference.cache

@@ -18,6 +18,7 @@ namespace WebApplication1
 
         });
 
+        public static List<CoinData>
 
         public static List<PlayerData> Players = new List<PlayerData>();
 

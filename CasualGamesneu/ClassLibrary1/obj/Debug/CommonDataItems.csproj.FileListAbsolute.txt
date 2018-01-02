@@ -3,3 +3,8 @@ c:\users\noel\documents\visual studio 2015\Projects\Solution1\ClassLibrary1\bin\
 c:\users\noel\documents\visual studio 2015\Projects\Solution1\ClassLibrary1\obj\Debug\CommonDataItems.csprojResolveAssemblyReference.cache
 c:\users\noel\documents\visual studio 2015\Projects\Solution1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 c:\users\noel\documents\visual studio 2015\Projects\Solution1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\obj\Debug\CommonDataItems.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

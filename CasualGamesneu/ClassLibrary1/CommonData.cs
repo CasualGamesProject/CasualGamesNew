@@ -23,4 +23,12 @@ namespace CommonDataItems
         public Position playerPosition;
         public string Password;
     }
+
+    public class CoinData
+    {
+        public string imageName = string.Empty;
+        public Position coinPosition;
+        
+    }
+
 }
