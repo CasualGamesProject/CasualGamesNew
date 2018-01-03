@@ -68,6 +68,3 @@ C:\Users\noel\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Wind
 C:\Users\noel\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\noel\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\noel\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.csprojResolveAssemblyReference.cache
-C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe.config
-C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.exe
-C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.pdb
