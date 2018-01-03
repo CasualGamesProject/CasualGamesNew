@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bensound-india.mp3" />
     <Content Include="Content\Player 1.png" />
     <Content Include="Content\Player 3.png" />
     <Content Include="Content\Player 4.png" />

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/noel/documents/visual studio 2015/Projects/Solution1/MonoGameClient/Content/Player 1.png</SourceFile>
-  <SourceTime>2017-12-21T18:21:26.319729+00:00</SourceTime>
-  <DestFile>C:/Users/noel/documents/visual studio 2015/Projects/Solution1/MonoGameClient/Content/bin/Windows/Player 1.xnb</DestFile>
-  <DestTime>2017-12-21T18:22:04.2970451+00:00</DestTime>
+  <SourceFile>C:/Users/liam/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 1.png</SourceFile>
+  <SourceTime>2018-01-02T13:34:21.5384277+00:00</SourceTime>
+  <DestFile>C:/Users/liam/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/bin/Windows/Player 1.xnb</DestFile>
+  <DestTime>2018-01-03T14:10:12.985732+00:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2017-03-01T15:05:36+00:00</ImporterTime>
+  <ImporterTime>2016-03-30T07:36:08+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2017-03-01T15:05:36+00:00</ProcessorTime>
+  <ProcessorTime>2016-03-30T07:36:08+01:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

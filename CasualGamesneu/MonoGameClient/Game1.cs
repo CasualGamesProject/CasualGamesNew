@@ -7,6 +7,7 @@ using System;
 using Sprites;
 using GameComponentNS;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonoGameClient
 {
@@ -16,6 +17,8 @@ namespace MonoGameClient
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteFont font;
+
+        protected Song song;
 
         string connectionMessage = string.Empty;
 
@@ -157,6 +160,8 @@ namespace MonoGameClient
             font = Content.Load<SpriteFont>("Message");
             Services.AddService<SpriteFont>(font);
 
+            Song song = Content.Load<Song>("bensound-india");  // Put the name of your song here instead of "song_title"
+            MediaPlayer.Play(song);
         }
 
        
