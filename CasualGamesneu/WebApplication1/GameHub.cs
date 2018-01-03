@@ -18,6 +18,17 @@ namespace WebApplication1
 
         });
 
+        Random r = new Random();
+
+        public static List<CoinData> Coins = new List<CoinData>();
+
+        public void GenerateCoins()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Coins.Add(new CoinData { coinPos =new Position { X = r.Next(0, 200), Y = r.Next(0,200) } });
+            }
+        }
         
         public static List<PlayerData> Players = new List<PlayerData>();
 
