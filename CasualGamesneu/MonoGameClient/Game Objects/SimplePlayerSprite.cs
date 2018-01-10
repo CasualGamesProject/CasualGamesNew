@@ -9,6 +9,7 @@ using Engine.Engines;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.AspNet.SignalR.Client;
 
+
 namespace Sprites
 {
     public class SimplePlayerSprite :DrawableGameComponent
@@ -65,6 +66,9 @@ namespace Sprites
             }
 
             BoundingRect = new Rectangle(Position.X, Position.Y, Image.Width, Image.Height);
+
+        
+
             base.Update(gameTime);
         }
 

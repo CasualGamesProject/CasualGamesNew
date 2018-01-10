@@ -8,15 +8,18 @@ using Sprites;
 using GameComponentNS;
 using System.Collections.Generic;
 
+
 namespace MonoGameClient
 {
     
     public class Game1 : Game
     {
+        
+        public List<Coin> AvaiableCoins = new List<Coin>();
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteFont font;
-
+        
         string connectionMessage = string.Empty;
 
 
@@ -46,6 +49,9 @@ namespace MonoGameClient
 
             Action<string, Position> otherMove = clientOtherMoved;
             proxy.On<string, Position>("OtherMove", otherMove);
+
+
+            //Action<List<CoinData>>("UpdateCoin", Update);
 
             base.Initialize();
         }
@@ -140,6 +146,25 @@ namespace MonoGameClient
                             }
 
                         });
+
+            proxy.Invoke<CoinData>("CoinsCreate").ContinueWith
+                (// This is an inline delegate pattern that processes the message 
+                 // returned from the async Invoke Call
+                (c) =>
+                {
+                    if (c.Result == null)
+                    {
+                        connectionMessage = "No Coin Data returned  ";
+
+                    }
+                    else
+                    {
+                        GenerateCoin(c.Result);
+                    }
+                }
+
+                );
+
         }
 
         private void LeaveGame()
@@ -147,6 +172,16 @@ namespace MonoGameClient
 
             proxy.Invoke<PlayerData>("LeftGame");
         }
+
+     
+
+        private void GenerateCoin(CoinData coin)
+        {
+            new Coin(this, coin, Content.Load<Texture2D>(coin.imageName),
+                new Point(coin.coinPos.X, coin.coinPos.Y));
+
+        }
+
 
         private void CreatePlayer(PlayerData player)
         {
@@ -165,8 +200,6 @@ namespace MonoGameClient
 
         }
 
-       
-      
         
         protected override void Update(GameTime gameTime)
         {
@@ -184,6 +217,15 @@ namespace MonoGameClient
 
             spriteBatch.Begin();
             spriteBatch.DrawString(font, connectionMessage, new Vector2(10, 10), Color.White);
+
+            foreach (var item in Components)
+            {
+                if (item.GetType() == typeof(Coin))
+                   {
+
+                }
+            }
+         
             spriteBatch.End();
 
             base.Draw(gameTime);

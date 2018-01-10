@@ -28,6 +28,7 @@ namespace WebApplication1
             {
                 Coins.Add(new CoinData { coinPos =new Position { X = r.Next(0, 200), Y = r.Next(0,200) } });
             }
+
         }
         
         public static List<PlayerData> Players = new List<PlayerData>();
