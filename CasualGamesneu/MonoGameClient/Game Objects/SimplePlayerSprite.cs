@@ -8,6 +8,8 @@ using CommonDataItems;
 using Engine.Engines;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.AspNet.SignalR.Client;
+using MonoGameClient;
+using Sprites;
 
 
 namespace Sprites
@@ -67,6 +69,10 @@ namespace Sprites
 
             BoundingRect = new Rectangle(Position.X, Position.Y, Image.Width, Image.Height);
 
+            //foreach (Coin item in )
+            //{
+
+            //}
         
 
             base.Update(gameTime);
