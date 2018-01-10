@@ -20,7 +20,8 @@ namespace MonoGameClient
 
         string connectionMessage = string.Empty;
 
-
+        Texture2D background;
+        Rectangle gameView;
         HubConnection serverConnection;
         IHubProxy proxy;
 
@@ -29,19 +30,28 @@ namespace MonoGameClient
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            graphics.IsFullScreen = false;
+
+
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = 720;
+
+            graphics.ApplyChanges();
+
         }
 
-       
+
         protected override void Initialize()
         {
 
             new InputEngine(this);
 
             //Our Azure server can be swapped with local host (http://s00162322gameserver.azurewebsites.net)
-
+            http://localhost:50983/
 
             //hosting locally 
-            serverConnection = new HubConnection("http://localhost:50983/");
+            serverConnection = new HubConnection("http://s00162322gameserver.azurewebsites.net");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
             serverConnection.Start();
@@ -165,6 +175,11 @@ namespace MonoGameClient
             font = Content.Load<SpriteFont>("Message");
             Services.AddService<SpriteFont>(font);
 
+            //Load in the background
+            background = Content.Load<Texture2D>("space");
+
+            gameView = new Rectangle(0, 0, GraphicsDevice.Viewport.Width * 2, GraphicsDevice.Viewport.Height * 2);
+
         }
 
        
@@ -186,6 +201,7 @@ namespace MonoGameClient
 
             spriteBatch.Begin();
             spriteBatch.DrawString(font, connectionMessage, new Vector2(10, 10), Color.White);
+            spriteBatch.Draw(background, gameView, Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);

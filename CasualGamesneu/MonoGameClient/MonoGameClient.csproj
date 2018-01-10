@@ -70,6 +70,7 @@
     <Content Include="Content\Player 3.png" />
     <Content Include="Content\Player 4.png" />
     <Content Include="Content\Player 2.png" />
+    <Content Include="Content\space.jpg" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>

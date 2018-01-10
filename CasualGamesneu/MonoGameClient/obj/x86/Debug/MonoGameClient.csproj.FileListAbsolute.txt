@@ -71,3 +71,4 @@ C:\Users\noel\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\obj\x86\
 C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe.config
 C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.exe
 C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.pdb
+C:\Users\noel\Source\Repos\CasualGamesNew\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\space.xnb
