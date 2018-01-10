@@ -15,6 +15,7 @@ namespace MonoGameClient
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
+        
         SpriteBatch spriteBatch;
         SpriteFont font;
 
@@ -30,6 +31,9 @@ namespace MonoGameClient
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferWidth = 1080;
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
         }
 
@@ -125,7 +129,6 @@ namespace MonoGameClient
         private void startGame()
         {
             // Continue on and subscribe to the incoming messages joined, currentPlayers, otherMove messages
-
             // Immediate Pattern
             proxy.Invoke<PlayerData>("Join")
                 .ContinueWith( // This is an inline delegate pattern that processes the message 
@@ -160,6 +163,8 @@ namespace MonoGameClient
             font = Content.Load<SpriteFont>("Message");
             Services.AddService<SpriteFont>(font);
 
+         
+
             Song song = Content.Load<Song>("bensound-india");  // Put the name of your song here instead of "song_title"
             MediaPlayer.Play(song);
         }
@@ -179,6 +184,8 @@ namespace MonoGameClient
        
         protected override void Draw(GameTime gameTime)
         {
+
+           
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
