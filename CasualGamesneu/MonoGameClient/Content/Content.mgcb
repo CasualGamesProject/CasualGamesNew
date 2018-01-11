@@ -80,3 +80,9 @@
 /processorParam:TextureFormat=Color
 /build:space.jpg
 
+#begin 8bit.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:8bit.mp3
+

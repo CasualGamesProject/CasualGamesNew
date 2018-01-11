@@ -4,11 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/S00162137/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 1.png</File>
-    <File>C:/Users/S00162137/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 2.png</File>
-    <File>C:/Users/S00162137/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 3.png</File>
-    <File>C:/Users/S00162137/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 4.png</File>
-    <File>C:/Users/S00162137/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Message.spritefont</File>
-    <File>C:/Users/S00162137/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/space.jpg</File>
+    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Player 1.png</File>
+    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Player 2.png</File>
+    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Player 3.png</File>
+    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Player 4.png</File>
+    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Message.spritefont</File>
+    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/space.jpg</File>
+    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/8bit.mp3</File>
   </SourceFiles>
 </SourceFileCollection>

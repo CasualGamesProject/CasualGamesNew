@@ -8,6 +8,8 @@ using Sprites;
 using GameComponentNS;
 using System.Collections.Generic;
 using Engine.Engines;
+using Microsoft.Xna.Framework.Media;
+
 
 namespace MonoGameClient
 {
@@ -33,7 +35,7 @@ namespace MonoGameClient
 
             graphics.IsFullScreen = false;
 
-
+            //fixed screen resolution (can sometimes stretch sprites)
             graphics.PreferredBackBufferWidth = 1280;
             graphics.PreferredBackBufferHeight = 720;
 
@@ -212,7 +214,12 @@ namespace MonoGameClient
             //Load in the background
             background = Content.Load<Texture2D>("space");
 
+            //worldsize
             gameView = new Rectangle(0, 0, GraphicsDevice.Viewport.Width * 2, GraphicsDevice.Viewport.Height * 2);
+
+            //load music
+            Song song = Content.Load<Song>("8bit");  
+            MediaPlayer.Play(song);
 
         }
 

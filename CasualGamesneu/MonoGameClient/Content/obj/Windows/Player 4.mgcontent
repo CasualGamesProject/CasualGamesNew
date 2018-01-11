@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/S00162137/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 4.png</SourceFile>
-  <SourceTime>2018-01-11T13:14:08.9167468+00:00</SourceTime>
-  <DestFile>C:/Users/S00162137/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/bin/Windows/Player 4.xnb</DestFile>
-  <DestTime>2018-01-11T14:10:23.5549421+00:00</DestTime>
+  <SourceFile>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Player 4.png</SourceFile>
+  <SourceTime>2018-01-11T18:04:37.0546035+00:00</SourceTime>
+  <DestFile>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/bin/Windows/Player 4.xnb</DestFile>
+  <DestTime>2018-01-11T18:10:48.4046207+00:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T15:05:36+00:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

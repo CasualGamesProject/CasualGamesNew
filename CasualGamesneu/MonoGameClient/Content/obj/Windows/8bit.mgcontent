@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/8bit.mp3</SourceFile>
+  <SourceTime>2018-01-11T18:10:25.1792602+00:00</SourceTime>
+  <DestFile>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/bin/Windows/8bit.xnb</DestFile>
+  <DestTime>2018-01-11T18:10:50.768672+00:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2017-03-01T15:05:36+00:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2017-03-01T15:05:36+00:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/bin/Windows/8bit.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>
