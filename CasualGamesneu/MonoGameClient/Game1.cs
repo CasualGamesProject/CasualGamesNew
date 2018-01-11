@@ -158,6 +158,25 @@ namespace MonoGameClient
                             }
 
                         });
+
+            proxy.Invoke<CoinData>("CoinsCreate").ContinueWith
+               (// This is an inline delegate pattern that processes the message 
+                // returned from the async Invoke Call
+               (c) =>
+               {
+                   if (c.Result == null)
+                   {
+                       connectionMessage = "No Coin Data returned  ";
+
+                   }
+                   else
+                   {
+                       GenerateCoin(c.Result);
+                   }
+               }
+
+               );
+
         }
 
         private void CreatePlayer(PlayerData player)
@@ -167,6 +186,21 @@ namespace MonoGameClient
 
             new FadeText(this, Vector2.Zero, " Welcome " + player.GamerTag + " you are playing as " + player.imageName);
         }
+
+        private void GenerateCoin(CoinData coin)
+        {
+            new Coin(this, coin, Content.Load<Texture2D>(coin.imageName),
+                new Point(coin.coinPos.X, coin.coinPos.Y));
+
+        }
+
+        private void LeaveGame()
+        {
+
+            proxy.Invoke<PlayerData>("LeftGame");
+        }
+
+
 
         protected override void LoadContent()
         {
@@ -189,7 +223,7 @@ namespace MonoGameClient
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            //call leave game
 
             base.Update(gameTime);
         }
@@ -201,7 +235,18 @@ namespace MonoGameClient
 
             spriteBatch.Begin();
             spriteBatch.DrawString(font, connectionMessage, new Vector2(10, 10), Color.White);
+
+            foreach (var item in Components)
+            {
+                if (item.GetType() == typeof(Coin))
+                {
+
+                }
+            }
+
             spriteBatch.Draw(background, gameView, Color.White);
+
+
             spriteBatch.End();
 
             base.Draw(gameTime);

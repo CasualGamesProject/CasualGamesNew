@@ -19,6 +19,20 @@ namespace WebApplication1
         });
 
 
+        Random r = new Random();
+
+        public static List<CoinData> Coins = new List<CoinData>();
+
+        public void GenerateCoins()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Coins.Add(new CoinData { coinPos = new Position { X = r.Next(0, 200), Y = r.Next(0, 200) } });
+            }
+
+        }
+
+
         public static List<PlayerData> Players = new List<PlayerData>();
 
         public static Stack<string> characters = new Stack<string>(new string[] {"Player 4", "Player 3", "Player 2", "Player 1" });
@@ -75,5 +89,19 @@ namespace WebApplication1
                 Clients.Others.OtherMove(playerID, newPosition);
             }
         }
+
+
+        public void LeftGame(PlayerData pdata)
+        {
+            RegisteredPlayers.Enqueue(pdata);
+            characters.Push(pdata.imageName);
+            //RegisteredPlayers.Enqueue(); Player Name
+            //characters.Push(); player ID
+            Clients.Others.Left(pdata);
+            Players.Remove(pdata); // remove from players on server
+        }
+
+
+
     }
 }
