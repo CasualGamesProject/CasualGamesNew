@@ -159,23 +159,23 @@ namespace MonoGameClient
 
                         });
 
-            proxy.Invoke<CoinData>("CoinsCreate").ContinueWith
-               (// This is an inline delegate pattern that processes the message 
-                // returned from the async Invoke Call
-               (c) =>
-               {
-                   if (c.Result == null)
-                   {
-                       connectionMessage = "No Coin Data returned  ";
+            //proxy.Invoke<CoinData>("CoinsCreate").ContinueWith
+            //   (// This is an inline delegate pattern that processes the message 
+            //    // returned from the async Invoke Call
+            //   (c) =>
+            //   {
+            //       if (c.Result == null)
+            //       {
+            //           connectionMessage = "No Coin Data returned  ";
 
-                   }
-                   else
-                   {
-                       GenerateCoin(c.Result);
-                   }
-               }
+            //       }
+            //       else
+            //       {
+            //           GenerateCoin(c.Result);
+            //       }
+            //   }
 
-               );
+            //   );
 
         }
 
@@ -194,11 +194,11 @@ namespace MonoGameClient
 
         }
 
-        private void LeaveGame()
-        {
+        //private void LeaveGame()
+        //{
 
-            proxy.Invoke<PlayerData>("LeftGame");
-        }
+        //    proxy.Invoke<PlayerData>("LeftGame");
+        //}
 
 
 
@@ -230,7 +230,7 @@ namespace MonoGameClient
 
        
         protected override void Draw(GameTime gameTime)
-        {
+         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();

@@ -71,7 +71,7 @@ namespace Sprites
         {
             SpriteBatch sp = Game.Services.GetService<SpriteBatch>();
             if (sp == null) return;
-            if (Image != null && Visible)
+            if (Image != null && Visible == true)
             {
                 sp.Begin();
                 sp.Draw(Image, BoundingRect, tint);
