@@ -17,6 +17,7 @@ namespace Sprites
         public Color tint = Color.White;
 		public PlayerData pData;
         public Point Target;
+        //test
 		
         // Constructor epects to see a loaded Texture
         // and a start position
