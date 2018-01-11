@@ -146,3 +146,7 @@ C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\MonoGameClient\bin\Win
 C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.csprojResolveAssemblyReference.cache
 C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.exe
 C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\MonoGameClient\obj\x86\Debug\MonoGameClient.pdb
+C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\coin.xnb
+C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\Tile1.xnb
+C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\Tile2.xnb
+C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\MonoGameClient\bin\Windows\x86\Debug\Content\Tile3.xnb

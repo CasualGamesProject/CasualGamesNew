@@ -51,6 +51,9 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tilemap\Map.cs" />
+    <Compile Include="Tilemap\RectangleHelper.cs" />
+    <Compile Include="Tilemap\Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -75,6 +78,9 @@
     <Content Include="Content\Player 4.png" />
     <Content Include="Content\Player 2.png" />
     <Content Include="Content\space.jpg" />
+    <Content Include="Content\Tile1.jpg" />
+    <Content Include="Content\Tile2.jpg" />
+    <Content Include="Content\Tile3.jpg" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>

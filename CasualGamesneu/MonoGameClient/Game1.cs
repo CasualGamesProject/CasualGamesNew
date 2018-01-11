@@ -20,6 +20,11 @@ namespace MonoGameClient
         SpriteBatch spriteBatch;
         SpriteFont font;
 
+
+        Map map;//t
+
+       
+
         string connectionMessage = string.Empty;
 
         Texture2D background;
@@ -74,7 +79,7 @@ namespace MonoGameClient
 
             Services.AddService<IHubProxy>(proxy);
 
-
+            map = new Map();//t
             base.Initialize();
         }
 
@@ -218,7 +223,7 @@ namespace MonoGameClient
             Services.AddService<SpriteFont>(font);
 
             //Load in the background
-            background = Content.Load<Texture2D>("space");
+           //background = Content.Load<Texture2D>("space");
 
             //worldsize
             gameView = new Rectangle(0, 0, GraphicsDevice.Viewport.Width * 2, GraphicsDevice.Viewport.Height * 2);
@@ -226,6 +231,23 @@ namespace MonoGameClient
             //load music
             Song song = Content.Load<Song>("8bit");  
             MediaPlayer.Play(song);
+
+
+
+            Tile.Content = Content;//t
+            map.Generate(new int[,] {
+                {3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3},
+                {3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3},
+                {3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3},
+                {3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3},
+                {3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3},
+                {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
+                {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
+                {3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3},
+                {3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3},
+                {3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3},
+                {3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3},
+            }, 64);
 
         }
 
@@ -247,6 +269,8 @@ namespace MonoGameClient
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
+            map.Draw(spriteBatch);
+
             spriteBatch.DrawString(font, connectionMessage, new Vector2(10, 10), Color.White);
 
             foreach (var item in Components)
@@ -257,7 +281,8 @@ namespace MonoGameClient
                 }
             }
 
-            spriteBatch.Draw(background, gameView, Color.White);
+            //draw background
+            //spriteBatch.Draw(background, gameView, Color.White);
 
 
             spriteBatch.End();
