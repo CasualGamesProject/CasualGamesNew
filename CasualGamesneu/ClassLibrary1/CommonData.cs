@@ -28,6 +28,7 @@ namespace CommonDataItems
 
     public class CoinData
     {
+        public string coinID;
         public string imageName = string.Empty;
         public Position coinPos;
 

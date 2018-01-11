@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\8bit.mp3" />
+    <Content Include="Content\coin.png" />
     <Content Include="Content\Player 1.png" />
     <Content Include="Content\Player 3.png" />
     <Content Include="Content\Player 4.png" />

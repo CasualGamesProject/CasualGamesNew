@@ -67,6 +67,11 @@ namespace MonoGameClient
             Action<string, Position> otherMove = clientOtherMoved;
             proxy.On<string, Position>("OtherMove", otherMove);
 
+
+
+
+
+
             Services.AddService<IHubProxy>(proxy);
 
 
@@ -92,6 +97,7 @@ namespace MonoGameClient
         }
 
 
+        
         // Only called when the client joins a game
         private void clientPlayers(List<PlayerData> otherPlayers)
         {
