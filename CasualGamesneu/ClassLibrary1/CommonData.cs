@@ -34,6 +34,12 @@ namespace CommonDataItems
 
     }
 
+    //used to share the coin data between players
+    public class GenericInfo
+    {
 
+        public static List<CoinData> Coins = new List<CoinData>();
+
+    }
 
 }
