@@ -79,7 +79,7 @@ namespace MonoGameClient
             proxy.On<string, Position>("OtherMove", otherMove);
 
 
-            
+
             //Action<CoinData> cJoined = coinJoined;
             //proxy.On<CoinData>("collectableJoined", cJoined);
 
@@ -104,9 +104,6 @@ namespace MonoGameClient
 
 
 
-
-
-
         //private void clientCoins(List<CoinData> otherCoins)
         //{
 
@@ -118,16 +115,14 @@ namespace MonoGameClient
         //    }
         //}
 
+
+
+
         //private void coinJoined(CoinData othercoinData)
         //{
         //    new Coin(this, othercoinData, Content.Load<Texture2D>(othercoinData.imageName),
         //                            new Point(othercoinData.coinPos.X, othercoinData.coinPos.Y));
         //}
-
-
-
-
-
 
 
 

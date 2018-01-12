@@ -22,21 +22,21 @@ namespace Sprites
         CoinData Coindata;
 
 
-        public Coin( CoinData cData, Texture2D imageTexture, Point pos) /*: base(game)*/
+        public Coin(CoinData cData, Texture2D imageTexture, Point pos) /*: base(game)*/
         {
             Coindata = cData;
-           // game.Components.Add(this);
+            // game.Components.Add(this);
             Image = imageTexture;
             Position = pos;
             BoundingRect = new Rectangle((int)Position.X, Position.Y, Image.Width, Image.Height);
 
         }
 
+        //Commented out to attempt to draw in game1, doesn't work
+
         //public override void Update(GameTime gameTime)
         //{
 
-        //BoundingRect = new Rectangle(Position.X, Position.Y,
-        //      Image.Width, Image.Height);
 
         //    //if (Coin has been collected by player)
         //    //{

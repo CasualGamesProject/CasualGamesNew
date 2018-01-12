@@ -21,14 +21,26 @@ namespace WebApplication1
         });
 
 
-        public static Stack<string> collectables = new Stack<string>(new string[] { "Coin" });
 
 
-        Random r = new Random();
-        // coin list
+
+
+
+
+
+
+        public static Queue<CoinData> coinDisplay = new Queue<CoinData>(new CoinData[]
+      {
+            new CoinData {  imageName = "", coinId = Guid.NewGuid().ToString()},
+            new CoinData {  imageName = "", coinId = Guid.NewGuid().ToString()},
+            new CoinData {  imageName = "", coinId = Guid.NewGuid().ToString()},
+            new CoinData {  imageName = "", coinId = Guid.NewGuid().ToString()},
+      });
+
         public static List<CoinData> Coins = new List<CoinData>();
 
-        //Method to spawn coins
+        public static Stack<string> coin = new Stack<string>(new string[] { "Coin" });
+
         public void GenerateCoins()
         {
             for (int i = 0; i < 100; i++)
@@ -37,6 +49,19 @@ namespace WebApplication1
             }
 
         }
+
+
+
+
+
+
+
+
+        Random r = new Random();
+        // coin list
+       
+
+      
 
 
         public static List<PlayerData> Players = new List<PlayerData>();
@@ -96,6 +121,34 @@ namespace WebApplication1
             }
         }
 
+
+        public CoinData CoinsJoin()
+        {
+            if (characters.Count > 0)
+            {
+                string coinsCollection = coin.Pop();
+                // if there is a registered player
+                if (coinDisplay.Count > 0)
+                {
+
+                    CoinData newCoin = coinDisplay.Dequeue();
+                    newCoin.imageName = coinsCollection;
+                    newCoin.coinPos = new Position
+                    {
+                        X = new Random().Next(700),
+                        Y = new Random().Next(500)
+                    };
+                    // Tell all the other clients that this player has Joined
+                    Clients.Others.coinJoined(newCoin);
+                    // Tell this client about all the other current 
+                    Clients.Caller.clientCoins(Coins);
+                    // Finaly add the new player on teh server
+                    Coins.Add(newCoin);
+                    return newCoin;
+                }
+            }
+            return null;
+        }
 
         public void LeftGame(PlayerData pdata)
         {
