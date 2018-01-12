@@ -35,6 +35,8 @@ namespace Sprites
         //public override void Update(GameTime gameTime)
         //{
 
+        //BoundingRect = new Rectangle(Position.X, Position.Y,
+        //      Image.Width, Image.Height);
 
         //    //if (Coin has been collected by player)
         //    //{

@@ -21,6 +21,9 @@ namespace WebApplication1
         });
 
 
+        public static Stack<string> collectables = new Stack<string>(new string[] { "Coin" });
+
+
         Random r = new Random();
         // coin list
         public static List<CoinData> Coins = new List<CoinData>();

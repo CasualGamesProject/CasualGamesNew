@@ -79,6 +79,14 @@ namespace MonoGameClient
             proxy.On<string, Position>("OtherMove", otherMove);
 
 
+            
+            //Action<CoinData> cJoined = coinJoined;
+            //proxy.On<CoinData>("collectableJoined", cJoined);
+
+            //Action<List<CoinData>> currentCollectables = clientCoins;
+            //proxy.On<List<CoinData>>("CurrentCollectables", currentCollectables);
+
+
 
 
             foreach (CoinData item in GenericInfo.Coins)
@@ -91,6 +99,39 @@ namespace MonoGameClient
             map = new Map();//t
             base.Initialize();
         }
+
+
+
+
+
+
+
+
+        //private void clientCoins(List<CoinData> otherCoins)
+        //{
+
+        //    foreach (CoinData coin in otherCoins)
+        //    {
+        //        new Coin(this, coin, Content.Load<Texture2D>(coin.imageName),
+        //            new Point(coin.coinPos.X, coin.coinPos.Y));
+        //        connectionMessage = "coins spawned";
+        //    }
+        //}
+
+        //private void coinJoined(CoinData othercoinData)
+        //{
+        //    new Coin(this, othercoinData, Content.Load<Texture2D>(othercoinData.imageName),
+        //                            new Point(othercoinData.coinPos.X, othercoinData.coinPos.Y));
+        //}
+
+
+
+
+
+
+
+
+
 
         private void clientOtherMoved(string playerID, Position newPos)
         {
@@ -112,6 +153,11 @@ namespace MonoGameClient
 
 
         
+
+
+
+
+
         // Only called when the client joins a game
         private void clientPlayers(List<PlayerData> otherPlayers)
         {
