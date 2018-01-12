@@ -28,6 +28,8 @@ namespace MonoGameClient
         string connectionMessage = string.Empty;
 
         Texture2D background;
+
+        //For game boundries 
         Rectangle gameView;
         HubConnection serverConnection;
         IHubProxy proxy;

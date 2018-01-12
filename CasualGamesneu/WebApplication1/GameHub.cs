@@ -9,6 +9,8 @@ namespace WebApplication1
 {
     public class GameHub : Hub
     {
+
+        //Queue of registered players
         public static Queue<PlayerData> RegisteredPlayers = new Queue<PlayerData>(new PlayerData[]
         {
             new PlayerData {GamerTag = "Wengu", imageName = "", playerID = Guid.NewGuid().ToString(), Coins = 0 },
@@ -20,9 +22,10 @@ namespace WebApplication1
 
 
         Random r = new Random();
-
+        // coin list
         public static List<CoinData> Coins = new List<CoinData>();
 
+        //Method to spawn coins
         public void GenerateCoins()
         {
             for (int i = 0; i < 100; i++)
