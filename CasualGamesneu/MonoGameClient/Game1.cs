@@ -32,6 +32,10 @@ namespace MonoGameClient
         HubConnection serverConnection;
         IHubProxy proxy;
 
+        //Coins to be displayed
+        List<Coin> DisplayCoins = new List<Coin>();
+
+
         public bool Connected { get; private set; }
         public Game1()
         {
@@ -75,7 +79,10 @@ namespace MonoGameClient
 
 
 
-
+            foreach (CoinData item in GenericInfo.Coins)
+            {
+                GenerateCoin(item);
+            }
 
             Services.AddService<IHubProxy>(proxy);
 
@@ -202,7 +209,7 @@ namespace MonoGameClient
 
         private void GenerateCoin(CoinData coin)
         {
-            new Coin(this, coin, Content.Load<Texture2D>(coin.imageName),
+            new Coin(coin, Content.Load<Texture2D>(coin.imageName),
                 new Point(coin.coinPos.X, coin.coinPos.Y));
 
         }
@@ -273,12 +280,9 @@ namespace MonoGameClient
 
             spriteBatch.DrawString(font, connectionMessage, new Vector2(10, 10), Color.White);
 
-            foreach (var item in Components)
+            foreach (Coin item in DisplayCoins)
             {
-                if (item.GetType() == typeof(Coin))
-                {
-
-                }
+                spriteBatch.Draw(item.Image, item.Position.ToVector2(), item.tint);
             }
 
             //draw background
