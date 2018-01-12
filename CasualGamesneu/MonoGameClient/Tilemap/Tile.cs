@@ -11,15 +11,18 @@ namespace MonoGameClient
 {
     class Tile
     {
+        //it's protected, so texture is only used in this class
         protected Texture2D texture;
 
         private Rectangle rectangle;
         public Rectangle Rectangle
         {
+            
             get { return rectangle; }
             protected set { rectangle = value; }          
         }
 
+        //Used to share the content loader(Tile1, Tile2 etc)
         private static ContentManager content;
         public static ContentManager Content
         {
@@ -33,7 +36,7 @@ namespace MonoGameClient
         }
     }
 
-    // used to give the ability of having multiple tiles
+    // used to give the ability of having multiple tiles(name each tile Tile1, Tile2 etc)
     class CollisionTiles : Tile
     {
         public CollisionTiles(int i, Rectangle newRectangle)

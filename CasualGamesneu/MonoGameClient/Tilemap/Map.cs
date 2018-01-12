@@ -17,6 +17,8 @@ namespace MonoGameClient
             get { return collisionTiles; }
         }
 
+        //Width and height of all tiles
+
         private int width, height;
         public int Width
         {
@@ -29,7 +31,7 @@ namespace MonoGameClient
         }
 
         public Map() { }
-
+        //cycles trough all tiles on x axis, drops down by one on the y axis and repeats the process
         public void Generate(int[,] map, int size)
         {
             for(int x = 0; x < map.GetLength(1); x++)
@@ -37,9 +39,10 @@ namespace MonoGameClient
                 {
                     int number = map[y, x];
 
-                    if (number > 0)
+                    if (number > 0)//if its 0 it leaves a blank, 1 and up draw tiles depending on how many you have
                         collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size)));
 
+                    //ensures width and height is not 1 tile offside
                     width = (x + 1) * size;
                     height = (y + 1) * size;
                 }
