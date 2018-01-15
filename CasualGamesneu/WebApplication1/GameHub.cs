@@ -32,16 +32,16 @@ namespace WebApplication1
 
         public static Stack<string> coin = new Stack<string>(new string[] { "Coin" });
 
-        public void GenerateCoins()
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                Coins.Add(new CoinData { coinPos = new Position { X = r.Next(0, 200), Y = r.Next(0, 200) } });
-            }
+       //public void GenerateCoins()
+       // {
+       //     for (int i = 0; i < 100; i++)
+       //     {
+       //         Coins.Add(new CoinData { coinPos = new Position { X = r.Next(0, 200), Y = r.Next(0, 200) } });
+       //     }
 
-        }
+       // }
 
-        Random r = new Random();
+     //   Random r = new Random();
         // coin list
        
 

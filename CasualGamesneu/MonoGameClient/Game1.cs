@@ -289,7 +289,7 @@ namespace MonoGameClient
                     }
                 }
 
-                proxy.Invoke<PlayerData>("LeftGame").ContinueWith( // This is an inline delegate pattern that processes the message 
+                proxy.Invoke<PlayerData>("LeftGame", clientUserData).ContinueWith( // This is an inline delegate pattern that processes the message 
                                                                    // returned from the async Invoke Call
                         (p) => { // Wtih p do 
                             if (p.Result == null)
