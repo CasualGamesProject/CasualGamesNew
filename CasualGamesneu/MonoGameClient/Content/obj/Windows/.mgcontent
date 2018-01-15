@@ -4,16 +4,16 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Player 1.png</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Player 2.png</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Player 3.png</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Player 4.png</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Message.spritefont</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/space.jpg</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/8bit.mp3</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/coin.png</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Tile1.jpg</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Tile2.jpg</File>
-    <File>C:/Users/noel/Source/Repos/CasualGamesNew3/CasualGamesneu/MonoGameClient/Content/Tile3.jpg</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 1.png</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 2.png</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 3.png</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Player 4.png</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Message.spritefont</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/space.jpg</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/8bit.mp3</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/coin.png</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Tile1.jpg</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Tile2.jpg</File>
+    <File>C:/Users/Peter/Source/Repos/CasualGamesNew/CasualGamesneu/MonoGameClient/Content/Tile3.jpg</File>
   </SourceFiles>
 </SourceFileCollection>

@@ -20,15 +20,6 @@ namespace WebApplication1
 
         });
 
-
-
-
-
-
-
-
-
-
         public static Queue<CoinData> coinDisplay = new Queue<CoinData>(new CoinData[]
       {
             new CoinData {  imageName = "", coinId = Guid.NewGuid().ToString()},
@@ -50,19 +41,9 @@ namespace WebApplication1
 
         }
 
-
-
-
-
-
-
-
         Random r = new Random();
         // coin list
        
-
-      
-
 
         public static List<PlayerData> Players = new List<PlayerData>();
 
@@ -72,7 +53,6 @@ namespace WebApplication1
         {
             Clients.All.hello();
         }
-
 
 
         public PlayerData Join()
@@ -156,7 +136,7 @@ namespace WebApplication1
             characters.Push(pdata.imageName);
             //RegisteredPlayers.Enqueue(); Player Name
             //characters.Push(); player ID
-            Clients.Others.Left(pdata);
+            Clients.Others.Left(pdata); // Calls the Action<PlayerData> left in the client
             Players.Remove(pdata); // remove from players on server
         }
 
