@@ -11,7 +11,7 @@ using Microsoft.AspNet.SignalR.Client;
 
 namespace Sprites
 {
-    public class Coin
+    public class Coin :DrawableGameComponent
     {
 
         public Texture2D Image;
@@ -22,7 +22,7 @@ namespace Sprites
         CoinData Coindata;
 
 
-        public Coin(CoinData cData, Texture2D imageTexture, Point pos) /*: base(game)*/
+        public Coin(Game game,CoinData cData, Texture2D imageTexture, Point pos) : base(game)
         {
             Coindata = cData;
             // game.Components.Add(this);
@@ -34,34 +34,34 @@ namespace Sprites
 
         //Commented out to attempt to draw in game1, doesn't work
 
-        //public override void Update(GameTime gameTime)
-        //{
+        public override void Update(GameTime gameTime)
+        {
 
 
-        //    //if (Coin has been collected by player)
-        //    //{
-        //    //        Visible = false;
-        //    //}
+            //if (Coin has been collected by player)
+            //{
+            //        Visible = false;
+            //}
 
-        //    base.Update(gameTime);
-        //}
+            base.Update(gameTime);
+        }
 
 
-        //public override void Draw(GameTime gameTime)
-        //{
-        //    //Get SpriteBatch to draw
-        //    SpriteBatch sp = Game.Services.GetService<SpriteBatch>();
-        //    if (sp == null) return; // stops errors
-        //    //Draws if image exists and Isn't visible (Collected)
-        //    if (Image != null && Visible)
-        //    {
-        //        sp.Begin();
-        //        sp.Draw(Image, BoundingRect, tint);
-        //        sp.End();
-        //    }
+        public override void Draw(GameTime gameTime)
+        {
+            //Get SpriteBatch to draw
+            SpriteBatch sp = Game.Services.GetService<SpriteBatch>();
+            if (sp == null) return; // stops errors
+            //Draws if image exists and Isn't visible (Collected)
+            if (Image != null && Visible)
+            {
+          //      sp.Begin();
+                sp.Draw(Image, BoundingRect, tint);
+             //   sp.End();
+            }
 
-        //    base.Draw(gameTime);
-        //}
+            base.Draw(gameTime);
+        }
 
 
     }

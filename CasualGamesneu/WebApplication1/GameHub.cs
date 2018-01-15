@@ -28,22 +28,37 @@ namespace WebApplication1
             new CoinData {  imageName = "", coinId = Guid.NewGuid().ToString()},
       });
 
-        public static List<CoinData> Coins = new List<CoinData>();
+
+
+        public static List<CoinData> coins = new List<CoinData>();
 
         public static Stack<string> coin = new Stack<string>(new string[] { "Coin" });
 
-       //public void GenerateCoins()
-       // {
-       //     for (int i = 0; i < 100; i++)
-       //     {
-       //         Coins.Add(new CoinData { coinPos = new Position { X = r.Next(0, 200), Y = r.Next(0, 200) } });
-       //     }
+        //Generate Coins
+        public void GenerateCoins()
+        {
+            Random r = new Random();
 
-       // }
+            for (int i = 0; i < 50; i++)
+            {
+               coins.Add(new CoinData { coinPos = new Position { X = r.Next(-300, 800), Y = r.Next(-50, 550) } });
+            }
+         
+        }
 
-     //   Random r = new Random();
-        // coin list
-       
+        //Used to send coin information to clients
+            public List<CoinData> CDATA()
+            {
+            List<CoinData> coinDATA = new List<CoinData>();
+
+            coinDATA = coins;
+
+
+            return coinDATA;
+            }
+
+
+
 
         public static List<PlayerData> Players = new List<PlayerData>();
 
@@ -57,6 +72,13 @@ namespace WebApplication1
 
         public PlayerData Join()
         {
+
+            if (Players.Count == 0)
+            {
+                GenerateCoins();
+            }
+
+
             // Check and if the charcters
             if (characters.Count > 0)
             {
@@ -102,6 +124,7 @@ namespace WebApplication1
         }
 
 
+        //Robs coin generation(Not used)
         public CoinData CoinsJoin()
         {
             if (characters.Count > 0)
@@ -121,23 +144,25 @@ namespace WebApplication1
                     // Tell all the other clients that this player has Joined
                     Clients.Others.coinJoined(newCoin);
                     // Tell this client about all the other current 
-                    Clients.Caller.clientCoins(Coins);
+                    Clients.Caller.clientCoins(coins);
                     // Finaly add the new player on teh server
-                    Coins.Add(newCoin);
+                    coins.Add(newCoin);
                     return newCoin;
                 }
             }
             return null;
         }
 
+
+        //when player presses escape or red X to exit, this method is called
+        //Allows assets and names to be reused but doesn't stop their image being drawn
         public void LeftGame(PlayerData pdata)
         {
             RegisteredPlayers.Enqueue(pdata);
-            characters.Push(pdata.imageName);
-            //RegisteredPlayers.Enqueue(); Player Name
-            //characters.Push(); player ID
+            characters.Push(pdata.imageName); //Allows image to be used again
+           
             Clients.Others.Left(pdata); // Calls the Action<PlayerData> left in the client
-            Players.Remove(pdata); // remove from players on server
+            Players.Remove(pdata); // remove from players on server data
         }
 
 

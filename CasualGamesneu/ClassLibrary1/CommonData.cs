@@ -24,8 +24,6 @@ namespace CommonDataItems
         public string Password;
     }
 
-
-
     public class CoinData
     {
         public string coinId;
@@ -34,12 +32,6 @@ namespace CommonDataItems
 
     }
 
-    //used to share the coin data between players
-    public class GenericInfo
-    {
-
-        public static List<CoinData> Coins = new List<CoinData>();
-
-    }
+  
 
 }

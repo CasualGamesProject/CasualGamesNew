@@ -19,7 +19,7 @@ namespace MonoGameClient
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteFont font;
-
+        Texture2D coinImage;
 
         Map map;//t
 
@@ -34,8 +34,11 @@ namespace MonoGameClient
         HubConnection serverConnection;
         IHubProxy proxy;
 
-        //Coins to be displayed
-        List<Coin> DisplayCoins = new List<Coin>();
+        //Coin collectable collections
+        List<Coin> DisplayCoins = new List<Coin>(); // Client's Coins to be displayed
+        List<CoinData> testlist = new List<CoinData>(); // used to grab info from server
+
+        //Used for identifying the client's player
         PlayerData clientUserData;
 
 
@@ -85,17 +88,7 @@ namespace MonoGameClient
             //gets called by proxy to send leftmessage
             Action<PlayerData> left = LeaveGame;
             proxy.On<PlayerData>("Left", left);
-
-            //Action<CoinData> cJoined = coinJoined;
-            //proxy.On<CoinData>("collectableJoined", cJoined);
-
-            //Action<List<CoinData>> currentCollectables = clientCoins;
-            //proxy.On<List<CoinData>>("CurrentCollectables", currentCollectables);
-
-            foreach (CoinData item in GenericInfo.Coins)
-            {
-                GenerateCoin(item);
-            }
+            
 
             Services.AddService<IHubProxy>(proxy);
 
@@ -103,26 +96,6 @@ namespace MonoGameClient
             base.Initialize();
         }
 
-
-        //private void clientCoins(List<CoinData> otherCoins)
-        //{
-
-        //    foreach (CoinData coin in otherCoins)
-        //    {
-        //        new Coin(this, coin, Content.Load<Texture2D>(coin.imageName),
-        //            new Point(coin.coinPos.X, coin.coinPos.Y));
-        //        connectionMessage = "coins spawned";
-        //    }
-        //}
-
-
-
-
-        //private void coinJoined(CoinData othercoinData)
-        //{
-        //    new Coin(this, othercoinData, Content.Load<Texture2D>(othercoinData.imageName),
-        //                            new Point(othercoinData.coinPos.X, othercoinData.coinPos.Y));
-        //}
 
 
         private void clientOtherMoved(string playerID, Position newPos)
@@ -157,7 +130,7 @@ namespace MonoGameClient
 
         private void clientJoined(PlayerData otherPlayerData)
         {
-            // Create an other player sprite
+            // Create another player sprite
             //use points in game to make movement smoother
             new OtherPlayerSprite(this, otherPlayerData, Content.Load<Texture2D>(otherPlayerData.imageName),
                                     new Point(otherPlayerData.playerPosition.X, otherPlayerData.playerPosition.Y));
@@ -190,7 +163,7 @@ namespace MonoGameClient
         private void startGame()
         {
             // Continue on and subscribe to the incoming messages joined, currentPlayers, otherMove messages
-
+         
             // Immediate Pattern
             proxy.Invoke<PlayerData>("Join")
                 .ContinueWith( // This is an inline delegate pattern that processes the message 
@@ -203,14 +176,9 @@ namespace MonoGameClient
                                 CreatePlayer(p.Result);
                                 // Here we'll want to create our game player using the image name in the PlayerData 
                                 // Player Data packet to choose the image for the player
-                                // We'll use a simple sprite player for the purposes of demonstration 
-
+                                // We'll use a simple sprite player for the purposes of demonstration                           
                             }
-
                         });
-
-            
-
         }
 
         private void CreatePlayer(PlayerData player)
@@ -219,20 +187,37 @@ namespace MonoGameClient
                 new Point(player.playerPosition.X, player.playerPosition.Y));
             clientUserData = player;
             new FadeText(this, Vector2.Zero, " Welcome " + player.GamerTag + " you are playing as " + player.imageName);
-        }
 
+            //To display coins on Load
+            GenerateCoin();
+        }
      
         private void LeaveGame(PlayerData playdata)
         {
-          
+          //Displays message when player leaves
             new FadeText(this, Vector2.Zero, playdata.GamerTag + " has left the game");
 
         }
 
-        private void GenerateCoin(CoinData coin)
+        private void GenerateCoin()
         {
-            new Coin(coin, Content.Load<Texture2D>(coin.imageName),
-                new Point(coin.coinPos.X, coin.coinPos.Y));
+            //Calls server for CoinList data
+            proxy.Invoke<List<CoinData>>("CDATA")
+                .ContinueWith(
+                (c) =>
+                {
+                    if (c.Result != null)
+                    {
+                        testlist = c.Result; // is equal t server's coin collection
+
+                        //create coins for each coindata
+                        foreach (CoinData cData in testlist)
+                        {
+                            DisplayCoins.Add(new Coin(this, cData, coinImage,
+                            new Point(cData.coinPos.X, cData.coinPos.Y)));
+                        }
+                    }
+                });
 
         }
 
@@ -249,6 +234,8 @@ namespace MonoGameClient
 
             //worldsize
             gameView = new Rectangle(0, 0, GraphicsDevice.Viewport.Width * 2, GraphicsDevice.Viewport.Height * 2);
+            coinImage = Content.Load<Texture2D>("coin");
+
 
             //load music
             Song song = Content.Load<Song>("8bit");  
@@ -281,14 +268,7 @@ namespace MonoGameClient
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
 
-                foreach (var item in Components)
-                {
-                    if (item.GetType()== typeof(SimplePlayerSprite))
-                    {
-
-                    }
-                }
-
+                // Calls the server's leave game method
                 proxy.Invoke<PlayerData>("LeftGame", clientUserData).ContinueWith( // This is an inline delegate pattern that processes the message 
                                                                    // returned from the async Invoke Call
                         (p) => { // Wtih p do 
@@ -296,16 +276,12 @@ namespace MonoGameClient
                                 connectionMessage = "No player Data returned";
                             else
                             {
-                                CreatePlayer(p.Result);
-                                // Here we'll want to create our game player using the image name in the PlayerData 
-                                // Player Data packet to choose the image for the player
-                                // We'll use a simple sprite player for the purposes of demonstration 
-
+                                LeaveGame(clientUserData);
                             }
 
                         });
 
-                Exit();
+                Exit(); //Close down game/client
             }
 
 
@@ -320,20 +296,20 @@ namespace MonoGameClient
             spriteBatch.Begin();
             map.Draw(spriteBatch);
 
+            //Draw messages
             spriteBatch.DrawString(font, connectionMessage, new Vector2(10, 10), Color.White);
 
+            //Draws all generated Coins
             foreach (Coin item in DisplayCoins)
             {
-                spriteBatch.Draw(item.Image, item.Position.ToVector2(), item.tint);
+                item.Draw(gameTime);
             }
-
             //draw background
             //spriteBatch.Draw(background, gameView, Color.White);
-
-
             spriteBatch.End();
 
             base.Draw(gameTime);
         }
+
     }
 }

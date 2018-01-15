@@ -17,3 +17,8 @@ C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\ClassLibrary1\bin\Debu
 C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\ClassLibrary1\obj\Debug\CommonDataItems.csprojResolveAssemblyReference.cache
 C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\noel\Source\Repos\CasualGamesNew3\CasualGamesneu\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\obj\Debug\CommonDataItems.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Peter\Source\Repos\CasualGamesNew\CasualGamesneu\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
