@@ -63,8 +63,11 @@ namespace MonoGameClient
             //Our Azure server can be swapped with local host (http://s00162322gameserver.azurewebsites.net)
             http://localhost:50983/
 
+            //Peter's Server Connection
+            serverConnection = new HubConnection("https://s00162137gameserver.azurewebsites.net");
+
             //hosting locally 
-            serverConnection = new HubConnection("http://s00162322gameserver.azurewebsites.net");
+            //serverConnection = new HubConnection("http://s00162322gameserver.azurewebsites.net");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
             serverConnection.Start();
@@ -78,6 +81,9 @@ namespace MonoGameClient
             Action<string, Position> otherMove = clientOtherMoved;
             proxy.On<string, Position>("OtherMove", otherMove);
 
+
+            Action<PlayerData> left = LeaveGame;
+            proxy.On<PlayerData>("Left", left);
 
 
             //Action<CoinData> cJoined = coinJoined;
@@ -96,12 +102,9 @@ namespace MonoGameClient
 
             Services.AddService<IHubProxy>(proxy);
 
-            map = new Map();//t
+            map = new Map();
             base.Initialize();
         }
-
-
-
 
 
         //private void clientCoins(List<CoinData> otherCoins)
@@ -125,9 +128,6 @@ namespace MonoGameClient
         //}
 
 
-
-
-
         private void clientOtherMoved(string playerID, Position newPos)
         {
             // iterate over all the other player components 
@@ -145,13 +145,6 @@ namespace MonoGameClient
                 }
             }
         }
-
-
-        
-
-
-
-
 
         // Only called when the client joins a game
         private void clientPlayers(List<PlayerData> otherPlayers)
@@ -172,10 +165,7 @@ namespace MonoGameClient
             new OtherPlayerSprite(this, otherPlayerData, Content.Load<Texture2D>(otherPlayerData.imageName),
                                     new Point(otherPlayerData.playerPosition.X, otherPlayerData.playerPosition.Y));
             new FadeText(this, Vector2.Zero, otherPlayerData.GamerTag + "Has joined the game");
-        }
-
-
-      
+        }   
 
         private void ServerConnection_StateChanged(StateChange State)
         {
@@ -222,23 +212,7 @@ namespace MonoGameClient
 
                         });
 
-            //proxy.Invoke<CoinData>("CoinsCreate").ContinueWith
-            //   (// This is an inline delegate pattern that processes the message 
-            //    // returned from the async Invoke Call
-            //   (c) =>
-            //   {
-            //       if (c.Result == null)
-            //       {
-            //           connectionMessage = "No Coin Data returned  ";
-
-            //       }
-            //       else
-            //       {
-            //           GenerateCoin(c.Result);
-            //       }
-            //   }
-
-            //   );
+            
 
         }
 
@@ -250,19 +224,20 @@ namespace MonoGameClient
             new FadeText(this, Vector2.Zero, " Welcome " + player.GamerTag + " you are playing as " + player.imageName);
         }
 
+     
+        private void LeaveGame(PlayerData playdata)
+        {
+
+            new FadeText(this, Vector2.Zero, playdata.GamerTag + " has left the game");
+
+        }
+
         private void GenerateCoin(CoinData coin)
         {
             new Coin(coin, Content.Load<Texture2D>(coin.imageName),
                 new Point(coin.coinPos.X, coin.coinPos.Y));
 
         }
-
-        //private void LeaveGame()
-        //{
-
-        //    proxy.Invoke<PlayerData>("LeftGame");
-        //}
-
 
 
         protected override void LoadContent()
@@ -307,8 +282,12 @@ namespace MonoGameClient
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                proxy.Invoke<PlayerData>("LeftGame");
+
                 Exit();
-            //call leave game
+            }
+
 
             base.Update(gameTime);
         }
